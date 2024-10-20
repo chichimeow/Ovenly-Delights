@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playball&family=Satisfy&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ovenly Delights</title>
+
+</head>
+<body>
+  <header>
+    <div class="logo">Ovenly Delights</div>
+    
+    <nav>
+      <ul>
+        <li><a href="#landing">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="landing" id="landing">
+    <div class="welcome">Welcome to Ovenly Delights!</div>
+    <div class="description">Here, you'll find a cozy corner dedicated to all things cookies. 
+      From classic recipes to creative twists, our goal is to inspire your baking adventures.
+       Join us as we explore the delightful world of cookies, share tips, and celebrate the joy of homemade treats. Happy baking!</div>
+    <div class="button-container">
+      <button class="btn" id="signInBtn">Sign In</button>
+      <button class="btn" id="signUpBtn">Sign Up</button>
+    </div>
+  </section>
+
+  <div id="signInModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSignIn">&times;</span>
+      <div class="form-container">
+        <h2>Sign In</h2>
+        <form>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <div class="remember-me">
+            <label>
+                <input type="checkbox"> Remember Me
+             </label>
+            </div>
+          <a href="#">Forgot Password?</a>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="signUpModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSignUp">&times;</span>
+      <div class="form-container">
+        <h2>Sign Up</h2>
+        <form>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <input type="password" placeholder="Confirm Password" required>
+          <div class="checkbox">
+            <input type="checkbox" class="form-check-input" id="terms" required>
+              <label class="form-check-label" for="terms">I agree to the <a href="#" target="_blank">Terms and Conditions</a></label>
+            </div>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeRecipe">&times;</span>
+        <div class="recipe-details">
+          <img id="recipeImage" src="" alt="Recipe Image" style="width: 100%; height: auto; border-radius: 8px;">
+          <h3 id="recipeTitle"></h3>
+          <p id="recipeDescription"></p>
+        </div>
+      </div>
+    </div>
+
+  <section class="recipe-container" id="recipes">
+    <div class="recipe-card">
+      <img src="https://i.pinimg.com/564x/8c/a1/e4/8ca1e41fcc44e43a0e81b3eac4011240.jpg" alt="Cookie 1" width="300">
+      <div class="recipe-content">
+        <h3>Kitty Cookies</h3>
+        <p>Indulge in the timeless charm of our Kitty Cookies, crafted with premium ingredients and baked to perfection for a delightful treat.</p>
+         <button class="cute-btn" onclick="viewRecipe('Kitty Cookies', 'https://www.foodstoragemoms.com/wp-content/uploads/2021/02/10-Essential-Ingredients-You-Need-to-Bake.jpg','cat-shaped sugar cookies or shortbread cookies, decorated with icing to resemble different cat faces and expressions. To make these cookies, you would need ingredients like butter, sugar, egg, vanilla, flour, baking powder, and salt. The basic steps involve creaming the butter and sugar, mixing in the wet and dry ingredients, cutting out the cat shapes, baking, and then decorating the cooled cookies with royal icing or colored icing to create the unique cat features and expressions. The decorating process allows you to make each cookie unique, resulting in a really cute and whimsical dessert or snack')">View Recipe</button>
+         <i class="fas fa-cookie-bite"></i> 
+        </button>
+        </div>
+      
+    </div>
+    <div class="recipe-card">
+      <img src="https://butternutbakeryblog.com/wp-content/uploads/2020/12/chocolate-chip-cookies.jpg" alt="Cookie 2">
+      <div class="recipe-content">
+        <h3>Chocolate Chip Cookies</h3>
+        <p>Savor the wholesome goodness of our chocolate chip cookies, with a soft and chewy texture that melts in your mouth.</p>
+        <button class="cute-btn" onclick="viewRecipe('Chocolate Chip Cookies', 'https://www.allrecipes.com/thmb/56zE_h2uSB4JfSIr7XS3MUPFDWY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10813-best-chocolate-chip-cookies-mfs-step-1-1121-d465078f5a5144718d72ed05d2422e23.jpg', 'These are classic chocolate chip cookies, rich and indulgent, featuring gooey chocolate chunks that melt in your mouth. To make these cookies, you will need ingredients such as butter, brown sugar, granulated sugar, eggs, vanilla extract, all-purpose flour, baking soda, and, of course, chocolate chips. The basic steps include creaming the butter and sugars together, adding the eggs and vanilla, mixing in the dry ingredients, and folding in the chocolate chips. After shaping the dough into balls, bake them until golden brown. The result is a warm, chewy cookie with a perfect balance of sweetness and chocolatey goodness, making them an irresistible treat for any occasion')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://sweetkitchencravings.com/wp-content/uploads/2024/07/IMG_2906-4-scaled.jpg" alt="Cookie 3">
+      <div class="recipe-content">
+      <h3>Soft Frosted Sugar Cookies</h3>
+        <p>Experience the delightful sweetness of our soft frosted sugar cookies, a perfect treat to brighten your day and elevate any celebration.</p>
+        <button class="cute-btn" onclick="viewRecipe('Soft Frosted Sugar Cookies', 'https://www.askchefdennis.com/wp-content/uploads/2011/10/Ingredients-for-sugar-cookies-10.jpg','To make these cookies, you will need ingredients such as butter, sugar, egg, vanilla extract, all-purpose flour, baking powder, and salt. The basic steps include creaming the butter and sugar together, adding the egg and vanilla, mixing in the dry ingredients, and rolling out the dough. After cutting them into shapes and baking until golden, frost with your favorite icing for a soft, sweet treat that’s perfect for any celebration.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://www.simplyrecipes.com/thmb/_PUk-G30FxplaR92-5_UzkATnEc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__01__Red-Velvet-Cookies-LEAD-01-6821503e276947a1a82dda01d95b9ff9.jpg" alt="Cookie 4">
+      <div class="recipe-content">
+        <h3>Red Velvet Cookies</h3>
+        <p>Savor the indulgent flavor of our red velvet cookies, a delightful twist on a classic favorite, topped with cream cheese frosting for the perfect sweet treat.</p>
+        <button class="cute-btn" onclick="viewRecipe('Decadent Double Chocolate Cookies', 'https://www.tastingtable.com/img/gallery/red-velvet-cookies-recipe/gather-the-ingredients-for-red-velvet-cookies-1643755092.jpg', 'To make these cookies, you will need ingredients such as butter, sugar, egg, red food coloring, cocoa powder, all-purpose flour, baking soda, and cream cheese for frosting. The basic steps include creaming the butter and sugar, mixing in the egg and food coloring, then combining the dry ingredients. After baking until set, top them with cream cheese frosting for a deliciously rich and vibrant dessert.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://www.allrecipes.com/thmb/XSJoH98eVnTCnaE6lTcDpYHbalw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9870-easy-sugar-cookies-mfs356-1-8c317695c5b645a48f6b20d1b97d3c93.jpg" alt="Cookie 5">
+      <div class="recipe-content">
+        <h3>Sugar Cookies</h3>
+        <p>Enjoy the simple joy of our classic sugar cookies, perfectly sweet and buttery, making them an ideal companion for any occasion or celebration.</p>
+        <button class="cute-btn" onclick="viewRecipe('Lemon Burst Cookies', 'https://www.allrecipes.com/thmb/FkHSeh-5gnHMPqtCg00I9HExWgk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/10402-The-best-rolled-sugar-cookies-mfs-Step1-080-07650e7a34384bc2b96468f9445da97a.jpg', 'To make these cookies, you will need ingredients such as butter, sugar, egg, vanilla extract, all-purpose flour, baking powder, and salt. The basic steps involve creaming the butter and sugar, incorporating the egg and vanilla, and mixing in the dry ingredients. After rolling the dough into balls and baking until lightly golden, you’ll have a classic treat that’s sweet and buttery, perfect for any occasion.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://cheneetoday.com/wp-content/uploads/2022/01/strawberry-cheesecake-cookies.jpg" alt="Cookies 6">
+      <div class="recipe-content">
+        <h3>Strawberry Cheesecake Cookies</h3>
+        <p>The delicious fusion of our strawberry cheesecake cookies, combining soft, chewy cookies with a creamy cheesecake filling and fresh strawberry flavor for a delightful treat.</p>
+        <button class="cute-btn" onclick="viewRecipe('Strawberry Cheesecake Cookies', 'https://images.squarespace-cdn.com/content/v1/602c455b4852046be8bede3e/6510b505-10d9-4f74-bea0-a6d77421cf8d/DSC00357.jpg', 'To make these cookies, you will need ingredients such as butter, sugar, egg, all-purpose flour, cream cheese, fresh strawberries, and vanilla extract. The basic steps include creaming the butter and sugar, adding the egg and vanilla, folding in the flour and diced strawberries. After baking until golden, you’ll enjoy a delightful cookie that combines the flavors of strawberry and cheesecake in every bite.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://static01.nyt.com/images/2022/11/30/dining/SE-White-Chocolate-Macadamia-COOKIEWEEK/merlin_216761685_98436024-b7aa-40ca-a3f1-b092de054297-superJumbo.jpg" alt="Cookie 7">
+      <div class="recipe-content">
+        <h3>White Chocolate Macadamia Nut Cookies</h3>
+        <p>Experience the delightful crunch of our white chocolate macadamia nut cookies, blending rich white chocolate with buttery macadamia nuts for a luxurious bite.</p>
+        <button class="cute-btn" onclick="viewRecipe('White Chocolate Macadamia Nut Cookies', 'https://www.mashed.com/img/gallery/white-chocolate-macadamia-nut-cookies-recipe/gather-the-ingredients-for-these-white-chocolate-macadamia-nut-cookies-1685031225.jpg', 'To make these cookies, you will need ingredients such as butter, sugar, brown sugar, eggs, all-purpose flour, baking soda, white chocolate chips, and macadamia nuts. The basic steps include creaming the butter and sugars, adding the eggs, mixing in the dry ingredients, and folding in the chocolate chips and nuts. After shaping the dough into balls and baking until golden, you’ll have a rich and crunchy cookie that’s simply irresistible.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://i0.wp.com/www.littlemamacookies.com/wp-content/uploads/2023/03/blueberry-cookies.jpg?fit=1536%2C2048&ssl=1" alt="Cookie 8">
+      <div class="recipe-content">
+        <h3>Blueberry Cheesecake Cookies</h3>
+        <p>Our blueberry cheesecake cookies, featuring soft cookies bursting with blueberries and a creamy cheesecake swirl for a delightful treat.  Each bite offers a perfect blend of fruity sweetness and creamy richness!</p>
+        <button class="cute-btn" onclick="viewRecipe('Blueberry Cheesecake Cookies', 'https://familyfocusblog.com/wp-content/smush-webp/2022/06/blueberry-cheesecake-ingredients-750x500.jpg.webp', 'To make these cookies, you will need ingredients such as butter, sugar, egg, all-purpose flour, cream cheese, fresh blueberries, and vanilla extract. The basic steps involve creaming the butter and sugar, adding the egg and vanilla, then gently folding in the flour and blueberries. After baking until set, you’ll enjoy a soft, fruity cookie with a creamy cheesecake twist.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://shopic.mcmcclass.com/20230317220001325167051.jpg" alt="Cookie 9">
+      <div class="recipe-content">
+        <h3>Hello Kitty Cookies</h3>
+        <p>Enjoy the whimsical charm of our hello kitty cookies, beautifully decorated with colorful icing, making them a fun and delicious snack.  They’re perfect for sharing at parties or enjoying with a cup of tea! </p>
+        <button class="cute-btn" onclick="viewRecipe('Fudgy Cocoa Cookies', 'https://www.allrecipes.com/thmb/0oMGdxlsT8tnuN2BNQgOjzugB_M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/RM-10275-classic-peanutbutter-cookies-ddmfs-ingredients-3x4-5e43d07b57204469b7756d093ad621cd.jpg', 'To make these cookies, you will need ingredients such as butter, sugar, egg, vanilla extract, all-purpose flour, baking powder, and icing for decoration. The basic steps include creaming the butter and sugar, adding the egg and vanilla, mixing in the dry ingredients, and rolling out the dough. After cutting out cat shapes and baking until golden, decorate with colorful icing for an adorable treat.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://i.pinimg.com/736x/e0/37/81/e0378189bcc4e7e543e1c2b7bb85dc4c.jpg" alt="Cookie 10">
+      <div class="recipe-content">
+        <h3>Checkerboard Cookies</h3>
+        <p>Savor the playful design of our checkerboard cookies, with a delightful blend of vanilla and cocoa flavors creating a visually stunning treat.</p>
+        <button class="cute-btn" onclick="viewRecipe('Coconut Macaroons', 'https://www.allrecipes.com/thmb/jUNvRBXqLeFVp8-pm87ySt1OWvs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/17209-absolutely-the-best-chocolate-chip-cookies-ddmfs-step-1-291-03b4580a4c994acd81f880d7f134ca99.jpg', 'To make these cookies, you will need ingredients such as butter, sugar, egg, all-purpose flour, cocoa powder, and vanilla extract. The basic steps include creaming the butter and sugar, mixing in the egg and vanilla, dividing the dough, and adding cocoa to one half. After shaping the dough into squares and baking, you’ll have a visually stunning treat with a delightful flavor combination.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://zhangcatherine.com/wp-content/uploads/2021/07/12001200-7.jpg" alt="Cookie 11">
+      <div class="recipe-content">
+        <h3>Matcha Cookies</h3>
+        <p>Embrace the cozy flavors of autumn with our soft and chewy pumpkin cookies, topped with a delectable cream cheese frosting.</p>
+        <button class="cute-btn" onclick="viewRecipe('Soft Pumpkin Cookies', 'https://api.vip.foodnetwork.ca/wp-content/uploads/2022/12/matcha-crinkle-cookies-ingredients.jpg?w=3840&quality=75', 'To make these cookies, you will need ingredients such as butter, sugar, egg, all-purpose flour, baking powder, and matcha powder. The basic steps include creaming the butter and sugar, adding the egg, mixing in the flour and matcha, and forming a dough. After baking until set, you’ll enjoy a unique, soft cookie with the distinct flavor of green tea.')">View Recipe</button>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="https://www.indulgewithmimi.com/wp-content/uploads/2022/11/bear-cookies-homemad-gifts-735x735.jpg" alt="Cookie 12">
+      <div class="recipe-content">
+        <h3>Bear Cookies</h3>
+        <p>Delight in our adorable bear-shaped cookies, soft and sweet, perfect for kids and adults alike, making snack time extra fun!</p>
+        <button class="cute-btn" onclick="viewRecipe('Bear Cookies', 'https://philosophyofyum.com/wp-content/uploads/2016/08/baking-ingredients-1.jpg', 'To make these cookies, you will need ingredients such as butter, sugar, egg, vanilla extract, all-purpose flour, and baking powder. The basic steps involve creaming the butter and sugar, adding the egg and vanilla, mixing in the dry ingredients, and rolling out the dough. After cutting out bear shapes and baking until golden, you’ll have fun and delicious cookies that are perfect for any occasion.')">View Recipe</button>
+      </div>
+    </div>
+  </section>
+  <section class="comment-box" id="comments">
+    <h3 style="color:  #4f3222;">Leave a Comment</h3>
+    <form id="commentForm">
+      <div class="comment-box">
+        <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
+        <button class="submit-button">Submit</button>
+    </form>
+    <div id="commentsDisplay">
+    </div>
+</section>
+
+<script>
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const commentInput = document.getElementById('commentInput');
+        const commentText = commentInput.value.trim(); 
+        
+        if (commentText) {
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment';
+            commentDiv.textContent = commentText;
+            
+            document.getElementById('commentsDisplay').appendChild(commentDiv);
+            
+            setTimeout(() => {
+                commentDiv.classList.add('show');
+            }, 10); 
+            
+            commentInput.value = ''; 
+        }
+    });
+</script>
+  <section class="centered-section" id="about">
+    <h2>About Us</h2>
+    <p>At Ovenly Delights, we’re passionate about creating delicious, handcrafted cookies that bring joy to every occasion. Using the finest ingredients and time-honored recipes, we offer a delightful variety of flavors to satisfy every sweet tooth. Join us in celebrating the simple pleasure of freshly baked treats!</p>
+  </section>
+
+  <section class="centered-section" id="contact">
+    <h2>Contact Us</h2>
+    <p> We’d love to hear from you! If you have any questions, feedback, or inquiries, please reach out to us at ovenlydelights@gmail.com. Your thoughts are important to us, and we’re here to help with anything you need. Thank you for choosing Ovenly Delights!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Ovenly Delights. All Rights Reserved.</p>
+    <div>
+      <div class="footer">
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">FAQs</a>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/profile.php?id=100093219105626&mibextid=ZbWKwL" target="_blank">Facebook</a>
+            <a href="https://x.com/gawxart" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/nekoooo05/" target="_blank">Instagram</a>
+        </div>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    var signInModal = document.getElementById("signInModal");
+    var signUpModal = document.getElementById("signUpModal");
+    var recipeModal = document.getElementById("recipeModal");
+
+    var signInBtn = document.getElementById("signInBtn");
+    var signUpBtn = document.getElementById("signUpBtn");
+
+    var closeSignIn = document.getElementById("closeSignIn");
+    var closeSignUp = document.getElementById("closeSignUp");
+    var closeRecipe = document.getElementById("closeRecipe");
+
+    signInBtn.onclick = function() {
+      signInModal.style.display = "block";
+    }
+
+    signUpBtn.onclick = function() {
+      signUpModal.style.display = "block";
+    }
+
+    closeSignIn.onclick = function() {
+      signInModal.style.display = "none";
+    }
+
+    closeSignUp.onclick = function() {
+      signUpModal.style.display = "none";
+    }
+
+    closeRecipe.onclick = function() {
+      recipeModal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == signInModal) {
+        signInModal.style.display = "none";
+      }
+      if (event.target == signUpModal) {
+        signUpModal.style.display = "none";
+      }
+      if (event.target == recipeModal) {
+        recipeModal.style.display = "none";
+      }
+    }
+
+    function viewRecipe(title, image, description) {
+      document.getElementById("recipeTitle").innerText = title;
+      document.getElementById("recipeImage").src = image;
+      document.getElementById("recipeDescription").innerText = description;
+      recipeModal.style.display = "block";
+    }
+
+    function submitComment(event) {
+      event.preventDefault();
+      const commentInput = document.getElementById("commentInput");
+      const commentsList = document.getElementById("commentsList");
+
+      const newComment = document.createElement("div");
+      newComment.classList.add("comment");
+      newComment.innerText = commentInput.value;
+
+      commentsList.appendChild(newComment);
+
+      commentInput.value = '';
+    }
+  </script>
+</body>
+</html>
